@@ -1,0 +1,93 @@
+
+import java.util.Scanner;
+import java.util.Random;
+public class stonepaperscissor {
+    public static void main(String[] args) {
+        System.out.println("enter 0 for paper 1 for stone and 2 for scissor");
+        int i = 0;
+        int c = 0;
+        int y = 0;
+        while (i < 5) {
+            Random rand = new Random();
+            int comp = rand.nextInt(3);
+            Scanner sc = new Scanner(System.in);
+            System.out.println("enter your choice!");
+            int your = sc.nextInt();
+            System.out.printf("comp entterd %d" ,  comp);
+            System.out.println();
+            System.out.println("you have enter "+your);
+            switch (comp) {
+                case 0:
+                    switch (your) {
+                        case 0:
+                            System.out.println("match is tie");
+                            break;
+                        case 1:
+                            System.out.println("comp is won");
+                            c++;
+                            break;
+                        case 2:
+                            System.out.println("you are won");
+                            y++;
+                            break;
+                        default:
+                            System.out.println("enterd valid choice:");
+
+                    }
+                    break;
+
+
+                case 1:
+                    switch (your) {
+                        case 0:
+                            System.out.println("you are won");
+                            y++;
+                            break;
+                        case 1:
+                            System.out.println("match is tied");
+                            break;
+                        case 2:
+                            System.out.println("comp  won");
+                            c++;
+                            break;
+                        default:
+                            System.out.println("enterd valid choice:");
+
+                    }
+                    break;
+
+                case 2:
+                    switch (your) {
+                        case 0:
+                            System.out.println("comp won");
+                            c++;
+                            break;
+                        case 1:
+                            System.out.println(" you won");
+                            y++;
+                            break;
+                        case 2:
+                            System.out.println("match is tied");
+                            break;
+                        default:
+                            System.out.println("enterd valid choice:");
+                    }
+                    break;
+
+
+
+            }
+            i++;
+        }
+        if(c>y)
+        {
+            System.out.println("comp won the series of 5 matches");
+        }
+         if(y>c) {
+            System.out.println("you won the series of 5 matches");
+        }
+        if(y==c) {
+            System.out.println("seried of 5 matches is tied");
+        }
+    }
+}

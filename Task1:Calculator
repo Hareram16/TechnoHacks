@@ -1,0 +1,75 @@
+import java.util.Scanner;
+
+class Calci{
+    public float addition(float a,float b)
+    {
+
+        System.out.println("addition is: ");
+        return a+b;
+    }
+    public float subtraction(float a,float b)
+    {
+        System.out.println("subtraction is: ");
+        return a-b;
+    }
+    public float multiplication(float a,float b)
+    {
+        System.out.println("multiplication is: ");
+        return a*b;
+
+    }
+    public float division(float a,float b)
+    {
+        System.out.println("Division is: ");
+        return a/b;
+    }
+}
+
+
+
+public class Calculator {
+    public static void main(String[] args) {
+        Calci obj=new Calci();
+        Scanner sc=new Scanner(System.in);
+
+        int x;
+        do {
+            System.out.println("--------Menu--------\n1.Addition\n2.Subtraction\n3.Multiplication\n4.Division\n5.Exit");
+            System.out.println("Enter your Choice");
+            x= sc.nextInt();
+            switch (x){
+                case 1:
+                    System.out.println("Enter Two Numbers:");
+                    float a= sc.nextFloat();
+                    float b=sc.nextFloat();
+                    System.out.println(obj.addition(a,b));
+                    break;
+                case 2:
+                    System.out.println("Enter Two Numbers:");
+                     a= sc.nextFloat();
+                     b=sc.nextFloat();
+                    System.out.println(obj.subtraction(a,b));
+                    break;
+                case 3:
+                    System.out.println("Enter Two Numbers:");
+                     a= sc.nextFloat();
+                     b=sc.nextFloat();
+                    System.out.println(obj.multiplication(a,b));
+                    break;
+                case 4:
+                    System.out.println("Enter Two Numbers:");
+                     a= sc.nextFloat();
+                     b=sc.nextFloat();
+                    System.out.println(obj.division(a,b));
+                    break;
+                case 5:
+
+                    System.out.println("Invalid Choice.....!");
+                    break;
+            }
+
+
+        }while (x!=5);
+
+    }}
+
